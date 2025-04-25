@@ -10,6 +10,5 @@ export interface PlanApplication{
     ProofDocument : string;
     UserId : number;
     SavingsPlanId : number;
-    SavingsPlan? : SavingsPlan;
-    
+    SavingsPlan? : SavingsPlan;    
 }
