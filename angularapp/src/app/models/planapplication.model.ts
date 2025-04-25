@@ -11,4 +11,5 @@ export interface PlanApplication{
     UserId : number;
     SavingsPlanId : number;
     SavingsPlan? : SavingsPlan;
+    
 }
