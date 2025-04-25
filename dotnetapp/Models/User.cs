@@ -27,7 +27,7 @@ namespace dotnetapp.Models
         public string MobileNumber { get; set;}
 
         [Required]
-        public string UseRole { get; set;}
+        public string UserRole { get; set;}
 
 
     }
