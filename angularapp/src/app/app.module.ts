@@ -27,6 +27,7 @@ import { UsernavComponent } from './components/usernav/usernav.component';
 import { UserplanapplicationformComponent } from './components/userplanapplicationform/userplanapplicationform.component';
 import { UserviewfeedbackComponent } from './components/userviewfeedback/userviewfeedback.component';
 import { UserviewsavingsplanComponent } from './components/userviewsavingsplan/userviewsavingsplan.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,9 @@ import { UserviewsavingsplanComponent } from './components/userviewsavingsplan/u
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
