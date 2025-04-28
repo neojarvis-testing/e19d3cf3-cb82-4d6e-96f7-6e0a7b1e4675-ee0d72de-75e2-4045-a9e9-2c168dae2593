@@ -37,7 +37,7 @@ export class SavingsplanService {
   addSavingsPlan(requestObject: SavingsPlan): Observable<SavingsPlan> {
     return this.http.post<SavingsPlan>(`${this.apiUrl}/api/savingsplan`, requestObject, { headers: this.getHeaders() })
   }
-  updateSavingsPlan(Id: string, requestObject: SavingsPlan): Observable<SavingsPlan> {
+  updateSavingsPlan(Id: number, requestObject: SavingsPlan): Observable<SavingsPlan> {
     return this.http.put<SavingsPlan>(`${this.apiUrl}/api/savingsplan/${Id}`, requestObject, { headers: this.getHeaders() })
   }
 }
