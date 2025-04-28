@@ -4,11 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-<<<<<<< HEAD
-@NgModule({
-  declarations: [
-    AppComponent
-=======
+
+// @NgModule({
+//   declarations: [
+//     AppComponent
+
 import { AuthguardComponent } from './components/authguard/authguard.component';
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
@@ -49,7 +49,7 @@ import { UserviewsavingsplanComponent } from './components/userviewsavingsplan/u
     UserplanapplicationformComponent,
     UserviewfeedbackComponent,
     UserviewsavingsplanComponent
->>>>>>> ce1b8d34e2a787eb8fc079f47814a350d7854e18
+
   ],
   imports: [
     BrowserModule,
