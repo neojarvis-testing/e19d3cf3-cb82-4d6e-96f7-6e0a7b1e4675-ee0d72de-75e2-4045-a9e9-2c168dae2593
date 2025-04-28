@@ -2,11 +2,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { PlanApplication } from '../models/planapplication.model';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlanapplicationformService {
+
+  public apiUrl:string=environment.apiUrl;
 
   plan: PlanApplication = {
     AppliedAmount: 0,
@@ -20,7 +23,7 @@ export class PlanapplicationformService {
 
   constructor(private http: HttpClient) { }
 
-  public apiUrl: string = ''
+  
 
   public addPlanApplication(plan: PlanApplication): Observable<PlanApplication> {
     const httpOptions = {

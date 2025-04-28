@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SavingsPlan } from '../models/savingsplan.model';
 import { PlanApplication } from '../models/planapplication.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SavingsplanService {
 
-  public apiUrl: string = ''
+  public apiUrl: string =environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
