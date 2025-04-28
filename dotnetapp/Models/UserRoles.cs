@@ -7,8 +7,7 @@ namespace dotnetapp.Models
 {
     public class UserRoles
     {
-         public const string Customer = "Customer";
-         public const string RegionalManager = "RegionalManager";
+
 
     }
 }
