@@ -2,15 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dotnetapp.Models;
+using dotnetapp.Data;
 
 namespace dotnetapp.Services
 {
-<<<<<<< HEAD
     public interface ISavingsPlanService
-=======
-    public class ISavingsPlanService
->>>>>>> ce1b8d34e2a787eb8fc079f47814a350d7854e18
     {
-        
+        Task<IEnumerable<SavingsPlan>> GetAllSavingsPlans();
+        Task<SavingsPlan> GetSavingsPlanById(int savingsPlanId);
+        Task<bool> AddSavingsPlan(SavingsPlan savingsPlan);
+        Task<bool> UpdateSavingsPlan(SavingsPlan savingsPlan);
+        Task<bool> DeleteSavingsPlan(int savingsPlanId);
     }
 }

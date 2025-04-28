@@ -2,15 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dotnetapp.Models;
 
 namespace dotnetapp.Services
 {
-<<<<<<< HEAD
+
     public interface IFeedbackService
-=======
-    public class IFeedbackService
->>>>>>> ce1b8d34e2a787eb8fc079f47814a350d7854e18
+
     {
-        
+        Task<IEnumerable<Feedback>> GetAllFeedbacks();
+        Task<IEnumerable<Feedback>> GetFeedbacksByUserId(int userId);
+        Task<bool> AddFeedback(Feedback feedback);
+        Task<bool> DeleteFeedback(int feedbackId);
     }
 }
