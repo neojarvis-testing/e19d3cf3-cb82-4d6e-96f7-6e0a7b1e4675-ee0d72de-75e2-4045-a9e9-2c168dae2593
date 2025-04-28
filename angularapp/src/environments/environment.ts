@@ -3,8 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl:'https://8080-ddecdbfbfbdfccbdceeaeedceeddeeaecdae.premiumproject.examly.io'
 };
+
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file
