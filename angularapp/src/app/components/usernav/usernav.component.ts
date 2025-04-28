@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./usernav.component.css']
 })
 export class UsernavComponent implements OnInit {
+  auth: any;
+  router: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }
