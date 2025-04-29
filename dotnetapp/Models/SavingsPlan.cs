@@ -11,7 +11,7 @@ namespace dotnetapp.Models
         [Key]
         public int SavingsPlanId { get; set; }
         [Required]
-        [StringLength(100)]
+        [MaxLength(100)]
         public string Name { get; set; }
 
         [Required]

@@ -22,15 +22,17 @@ namespace dotnetapp.Models
         public string Status { get; set; }
         [Required]
         public DateTime ApplicationDate { get; set; }
-        [Required]
+
         [MaxLength(500)]
         public string? Remarks { get; set; }
-        [Required]
+        
         public string? ProofDocument { get; set; }
 
+        
         [JsonIgnore]
         public User? User { get; set; }
         [JsonIgnore]
+        
         public SavingsPlan? SavingsPlan { get; set; }
 
     }
