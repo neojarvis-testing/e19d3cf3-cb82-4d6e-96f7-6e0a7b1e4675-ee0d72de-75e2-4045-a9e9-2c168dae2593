@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 //   declarations: [
 //     AppComponent
 
-import { AuthguardComponent } from './components/authguard/authguard.component';
+
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -32,7 +32,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    AuthguardComponent,
     ErrorComponent,
     HomeComponent,
     LoginComponent,
