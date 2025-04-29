@@ -1,0 +1,144 @@
+/* General Styling */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(135deg, rgba(69, 186, 237, 0.1), rgba(252, 255, 61, 0.1));
+  }
+  
+  .container {
+    margin-top: 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    /* background: #ffffff; */
+    border-radius: 10px;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
+    color: #1f1c2c;
+  }
+  
+  .heading {
+    font-family: 'Roboto', sans-serif !important;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1f1c2c;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5em;
+  }
+  
+  h1{
+    font-family: 'Roboto', sans-serif !important;
+  }
+  
+  .text-center
+  {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-label {
+    margin-right: 10px;
+  }
+  
+  .form-control {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f4f4f4;
+    color: #1f1c2c;
+  }
+  
+  .search-bar {
+    width: 100%;
+  }
+  
+  .savings-plan-card-container {
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 10px;
+    background-color: #ffffff;
+  }
+  
+  .savings-plan-card-container:hover {
+    transform: scale(1.05);
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .savings-plan-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 350px;
+    border-radius: 30px; /* Make inner card corners more rounded */ 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-title {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card-text {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .btn-primary {
+    background-color: rgb(43, 171, 43);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #ffffff;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: rgb(30, 150, 30);
+  }
+  
+  .btn-success {
+    background-color: rgb(30, 150, 30);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #ffffff;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .btn[disabled] {
+    background: #555;
+    cursor: not-allowed;
+  }
+  
+  
+  
+  
