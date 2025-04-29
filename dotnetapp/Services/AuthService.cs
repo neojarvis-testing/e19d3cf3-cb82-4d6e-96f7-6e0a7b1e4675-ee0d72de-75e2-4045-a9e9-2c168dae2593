@@ -46,7 +46,7 @@ namespace dotnetapp.Services
             {
                 UserName = model.Username,
                 Email = model.Email,
-                Name = model.Username
+                //Name = model.Username
             };
             var result = await _userManager.CreateAsync(user, model.Password);
 

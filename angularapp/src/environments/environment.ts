@@ -8,8 +8,6 @@ export const environment = {
 
   apiUrl:'https://8080-faaabadebefbfbdfccbdceeaeedceeddeeaecdae.premiumproject.examly.io'
 
-
-
 };
 
 
