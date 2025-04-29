@@ -4,6 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+
+// @NgModule({
+//   declarations: [
+//     AppComponent
+
+import { AuthguardComponent } from './components/authguard/authguard.component';
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -21,6 +28,7 @@ import { UserplanapplicationformComponent } from './components/userplanapplicati
 import { UserviewfeedbackComponent } from './components/userviewfeedback/userviewfeedback.component';
 import { ManagereditsavingsplanComponent } from './components/managereditsavingsplan/managereditsavingsplan.component';
 import { UserviewsavingsplanComponent } from './components/userviewsavingsplan/userviewsavingsplan.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -42,15 +50,14 @@ import { UserviewsavingsplanComponent } from './components/userviewsavingsplan/u
     UsernavComponent,
     UserplanapplicationformComponent,
     UserviewfeedbackComponent,
-    ManagereditsavingsplanComponent,
-    UserviewsavingsplanComponent,
+    UserviewsavingsplanComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

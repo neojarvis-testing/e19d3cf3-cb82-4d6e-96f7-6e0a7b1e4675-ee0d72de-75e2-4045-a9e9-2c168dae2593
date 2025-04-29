@@ -1,1 +1,25 @@
-<h1>magaer nav</h1>
+<div class="nav-container">
+    <div class="logo">
+        <!-- <a style="cursor: pointer;" routerLink="/home">FINANCE HUB</a> -->
+        <a routerLink="/home" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="assets/navbar/Logo.jpg" alt="Finance Hub Logo" class="logo-img" />
+            <span style="margin-left: 10px;">FINANCE HUB</span>
+        </a>
+    </div>
+    <div class="menu">
+        <span class="border border-white text-white btn-sm nav-link">{{name}} / Manager</span>
+        <a style="cursor: pointer; padding-right: 20px;" routerLink="/home">Home</a>
+        <div class="dropdown">
+            <a style="cursor: pointer; padding-right: 20px;" class="dropbtn">Savings Plans</a>
+            <div class="dropdown-content">
+                <a routerLink="/addsavingplan">Add Savings Plan</a>
+                <a routerLink="/viewsavingplan">View Savings Plan</a>
+            </div>
+            
+        </div>
+        <a style="cursor: pointer; padding-right: 20px;"
+            routerLink="/managerviewapplications">Requested Application Forms</a>
+        <a style="cursor: pointer; padding-right: 20px;" routerLink="/managerviewfeedbacks">Feedbacks</a>
+        <button style="background-color: rgba(255, 0, 0, 0.774); color: white;" (click)="logout()">Logout</button>
+    </div>
+</div>
