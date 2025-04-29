@@ -1,117 +1,136 @@
-
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f2f5;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-}
-
-.container {
-    padding: 20px;
-}
-
-.heading {
-    font-family: 'Dancing Script', cursive;
-    background-color: #2575fc;
-    color: white;
+.dashboard-container {
+    padding: 120px 30px 50px;
+    background-color: #071E3D;
+    min-height: 100vh;
+  }
+  
+  .form-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .form-header {
     text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-}
-
-.form {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.text-center {
-    text-align: center;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-input, textarea {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-button {
-    width: 100%;
-    padding: 10px 0;
-    margin-top: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-.font-dancing-script {
-    font-family: 'Dancing Script', cursive;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.mt-3 {
-    margin-top: 1rem;
-}
-
-/* Star Rating Styling */
-.star-rating {
-    margin-top: 15px;
-}
-
-.stars {
-    display: flex;
-    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-header h2 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
     margin-bottom: 10px;
-}
-
-.star {
-    font-size: 2rem;
-    color: #ccc;
+  }
+  
+  .form-header p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+  }
+  
+  .card {
+    background-color: #102C5C;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-icon {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-icon img {
+    width: 80px;
+    height: 80px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    transition: all 0.3s;
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .form-control:focus {
+    border-color: #00A67D;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 166, 125, 0.2);
+  }
+  
+  .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .error-message {
+    color: #ff6b6b;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: none;
     cursor: pointer;
-}
-
-.star.active {
-    color: gold;
-}
+  }
+  
+  .btn-primary {
+    background-color: #00A67D;
+    color: white;
+  }
+  
+  .btn-primary:hover:not(:disabled) {
+    background-color: #00c693;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 166, 125, 0.4);
+  }
+  
+  .btn-primary:disabled {
+    background-color: rgba(0, 166, 125, 0.3);
+    cursor: not-allowed;
+  }
+  
+  .btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+  
+  .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  @media (max-width: 576px) {
+    .card {
+      padding: 30px 20px;
+    }
+    
+    .form-actions {
+      flex-direction: column;
+    }
+    
+    .btn-primary, .btn-secondary {
+      width: 100%;
+    }
+  }

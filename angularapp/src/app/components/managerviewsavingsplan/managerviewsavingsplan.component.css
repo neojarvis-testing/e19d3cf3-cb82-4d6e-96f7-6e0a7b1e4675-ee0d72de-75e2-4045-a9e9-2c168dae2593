@@ -1,156 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.dashboard-container {
+  padding: 120px 30px 50px;
+  background-color: #071E3D;
+  min-height: 100vh;
+}
 
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, rgba(69, 186, 237, 0.1), rgba(252, 255, 61, 0.1));
-  color: #1f1c2c;
+.dashboard-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
   margin: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-h1 {
-  text-align: center;
-  color: #1f1c2c;
-  margin: 0; /* Removes default margin */
-  padding: 20px 0; /* Add padding for better appearance */
-  font-family: 'Roboto', sans-serif; /* Ensure heading font style matches */
-  font-size: 2rem; /* Ensure heading font size matches */
-}
-
-.container {
+.add-btn {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto; /* Allow vertical scrolling */
+  gap: 8px;
+  background-color: #00A67D;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.background-wrapper {
-  background: linear-gradient(135deg, rgba(69, 186, 237, 0.15), rgba(252, 255, 61, 0.15));
-  padding: 20px;
-  border-radius: 8px;
+.add-btn:hover {
+  background-color: #00c693;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 166, 125, 0.4);
 }
 
-.table {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px;
-  border-collapse: collapse;
-  background: #ffffff;
-  border-radius: 15px; /* Rounded corners for the entire table */
-  /* box-shadow: 0 8px 16px rgba(24, 96, 184, 0.498); */
-  box-shadow: 0 4px 8px rgba(24, 96, 184, 0.25);
-  animation: fadeIn 1s ease-in-out;
+.data-table-container {
+  background-color: #102C5C;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
-.table thead {
-  background: #ffffff; /* Set table heading background to white */
-  color: #1f1c2c; /* Table heading text color */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.table th:nth-child(3), /* Targeting Goal Amount column */ 
-.table td:nth-child(3) { 
-  text-align: right; /* Right-align specific column */ 
-}
-
-.table th:nth-child(1), /* Targeting S. No column */ 
-.table th:nth-child(4), /* Targeting Time Frame column */ 
-.table td:nth-child(1), 
-.table td:nth-child(4) { 
-  text-align: center; /* Center-align specific columns */ 
-}
-
-.table th:nth-child(2), /* Targeting Plan Name column */ 
-.table td:nth-child(2) { 
-  width: 15%; /* Set width for Plan Name column */ 
-} 
-
-.table th:nth-child(6), /* Targeting Description column */ 
-.table td:nth-child(6) { 
-  width: 25%; /* Set width for Description column */ 
-  text-align: center; /* Center-align specific columns */ 
-}
-
-.table th,
-.table td {
-  padding: 20px 18px;
+.data-table th, .data-table td {
+  padding: 15px 20px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
-  font-size: 14px;
-  font-weight: normal;
 }
 
-.table th {
-  font-weight: bold;
+.data-table th {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
 }
 
-.right-align { 
-  text-align: right; 
+.data-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s;
 }
 
-.table th.action-header {
-  text-align: center; /* Center the text in the Action header */
-  padding-right: 40px; /* Adjust this value to move the heading to the right */
+.data-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
 }
 
-.table tbody tr:nth-child(even) {
-  background: #f4f4f4;
+.data-table tbody tr:last-child {
+  border-bottom: none;
 }
 
-.table tbody tr:hover {
-  background: #e0e0e0;
+.risk-badge, .status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
-.btn {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
+.low-risk {
+  background-color: rgba(0, 166, 125, 0.2);
+  color: #00A67D;
 }
 
-.btn-primary {
-  background: #2979ff;
+.medium-risk {
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #FFC107;
 }
 
-.btn-primary:hover {
-  background: #2962ff;
-  transform: scale(1.05);
+.high-risk {
+  background-color: rgba(255, 107, 107, 0.2);
+  color: #FF6B6B;
 }
 
-.btn-danger {
-  background: linear-gradient(135deg, #ff1745a1, #d50000a6);
+.active {
+  background-color: rgba(0, 166, 125, 0.2);
+  color: #00A67D;
 }
 
-.btn-danger:hover {
-  background: linear-gradient(135deg, #d50000, #ff1744);
-  transform: scale(1.05);
+.inactive {
+  background-color: rgba(255, 107, 107, 0.2);
+  color: #FF6B6B;
 }
 
 .action-buttons {
   display: flex;
-  justify-content: space-evenly; 
-  align-items: center; /* Align buttons vertically centered */
-  padding:900px;
-  height: 80px;
+  gap: 10px;
 }
 
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(-20px);
+.edit-btn, .delete-btn {
+  background-color: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.edit-btn {
+  color: #3498db;
+}
+
+.delete-btn {
+  color: #FF6B6B;
+}
+
+.edit-btn:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.delete-btn:hover {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+@media (max-width: 992px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
-  to {
-      opacity: 1;
-      transform: translateY(0);
+  
+  .data-table-container {
+    overflow-x: auto;
+  }
+  
+  .data-table {
+    min-width: 900px;
   }
 }

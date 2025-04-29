@@ -1,25 +1,43 @@
-<div class="nav-container">
+<div class="dashboard-nav">
     <div class="logo">
-        <!-- <a style="cursor: pointer;" routerLink="/home">FINANCE HUB</a> -->
-        <a routerLink="/home" style="display: flex; align-items: center; text-decoration: none;">
+        <a routerLink="/home" class="logo-link">
             <img src="assets/navbar/Logo.jpg" alt="Finance Hub Logo" class="logo-img" />
-            <span style="margin-left: 10px;">FINANCE HUB</span>
+            <span>FINANCE HUB</span>
         </a>
     </div>
-    <div class="menu">
-        <span class="border border-white text-white btn-sm nav-link">{{name}} / Manager</span>
-        <a style="cursor: pointer; padding-right: 20px;" routerLink="/home">Home</a>
-        <div class="dropdown">
-            <a style="cursor: pointer; padding-right: 20px;" class="dropbtn">Savings Plans</a>
+    <div class="nav-links">
+        <a routerLink="/home" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <div class="nav-dropdown">
+            <a class="nav-item dropbtn">
+                <i class="fas fa-chart-line"></i>
+                <span>Savings Plans</span>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
             <div class="dropdown-content">
                 <a routerLink="/addsavingplan">Add Savings Plan</a>
                 <a routerLink="/viewsavingplan">View Savings Plan</a>
             </div>
-            
         </div>
-        <a style="cursor: pointer; padding-right: 20px;"
-            routerLink="/managerviewapplications">Requested Application Forms</a>
-        <a style="cursor: pointer; padding-right: 20px;" routerLink="/managerviewfeedbacks">Feedbacks</a>
-        <button style="background-color: rgba(255, 0, 0, 0.774); color: white;" (click)="logout()">Logout</button>
+        <a routerLink="/managerviewapplications" class="nav-item">
+            <i class="fas fa-file-alt"></i>
+            <span>Applications</span>
+        </a>
+        <a routerLink="/managerviewfeedbacks" class="nav-item">
+            <i class="fas fa-comments"></i>
+            <span>Feedbacks</span>
+        </a>
+    </div>
+    <div class="user-section">
+        <div class="user-info">
+            <span class="user-name">{{name}}</span>
+            <span class="user-role">Manager</span>
+        </div>
+        <button class="logout-btn" (click)="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+            Logout
+        </button>
     </div>
 </div>
