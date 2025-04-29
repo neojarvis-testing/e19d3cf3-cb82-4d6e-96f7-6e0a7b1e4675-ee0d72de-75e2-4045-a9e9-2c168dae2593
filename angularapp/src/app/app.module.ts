@@ -31,6 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     LoginComponent,
     ManagercreatesavingsplanComponent,
+    ManagerviewsavingsplanComponent,
     ManagernavComponent,
     ManagerviewapplicationformComponent,
     ManagerviewfeedbackComponent,
