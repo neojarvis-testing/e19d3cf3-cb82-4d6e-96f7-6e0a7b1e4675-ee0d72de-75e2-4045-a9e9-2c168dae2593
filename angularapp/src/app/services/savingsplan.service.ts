@@ -28,7 +28,7 @@ export class SavingsplanService {
   getAppliedPlans(userId: number): Observable<PlanApplication[]> {
     return this.http.get<PlanApplication[]>(`${this.apiUrl}/api/planapplications/user/${userId}`, { headers: this.getHeaders() })
   }
-  deleteSavingsPlan(savingsPlanId: string): Observable<void> {
+  deleteSavingsPlan(savingsPlanId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/api/savingsplans/${savingsPlanId}`, { headers: this.getHeaders() })
   }
   getSavingsPlanById(Id: number): Observable<SavingsPlan> {
