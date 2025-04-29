@@ -1,0 +1,143 @@
+/* Modern and Professional Styling */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .heading {
+    text-align: center;
+    margin: 40px 0;
+    color: #2c3e50;
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    margin: 30px auto;
+    max-width: 1000px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 0;
+  }
+  
+  .table th {
+    text-align: center;
+    padding: 20px 15px;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .table td {
+    text-align: center;
+    padding: 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+  }
+  
+  .table tbody tr {
+    transition: all 0.3s ease;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+  }
+  
+  .btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+  }
+  
+  .btn-secondary {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    color: white;
+    border: none;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+        margin: 15px;
+        padding: 15px;
+    }
+    .heading {
+        font-size: 2em;
+    }
+    .table th, .table td {
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+  }
+  

@@ -7,6 +7,7 @@ using dotnetapp.Models;
 namespace dotnetapp.Services
 {
     public interface IPlanApplicationService
+
     {
         Task<IEnumerable<PlanApplication>> GetAllPlanApplications();
         Task<PlanApplication> GetPlanApplicationById(int planApplicationId);
