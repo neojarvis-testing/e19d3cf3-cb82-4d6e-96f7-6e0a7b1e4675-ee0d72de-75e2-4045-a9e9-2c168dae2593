@@ -1,1 +1,41 @@
-<h1>Finance</h1>
+<div *ngIf="isLoggedIn()">
+    <app-managernav></app-managernav>
+    
+    <div class="background-wrapper">
+        <div class="container">
+            <h1>Savings Plans</h1>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>S. No</th>
+                        <th>Plan Name</th>
+                        <th>Goal Amount</th>
+                        <th>Time Frame (Years)</th>
+                        <th>Risk Level</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th class="action-header">Action</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let savingsPlan of savingsPlans; index as i">
+                        <td class="right-align">{{i + 1}}</td>
+                        <td>{{savingsPlan.Name}}</td>
+                        <td class="right-align">{{savingsPlan.GoalAmount | currency:'INR':'symbol':'1.0-0'}}</td>
+                        <td class="right-align">{{savingsPlan.TimeFrame}}</td>
+                        <td>{{savingsPlan.RiskLevel}}</td>
+                        <td>{{savingsPlan.Description}}</td>
+                        <td>{{savingsPlan.Status}}</td>
+                        <td class="action-buttons">
+                            <button class="btn btn-primary" (click)="updateSavingsPlan(savingsPlan.SavingsPlanId)">Edit</button>
+                            <button class="btn btn-danger" (click)="confirmDelete(savingsPlan)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </div>
+  <div *ngIf="!isLoggedIn()">
+    <app-error></app-error>
+  </div>

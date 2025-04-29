@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 //   declarations: [
 //     AppComponent
 
-
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
