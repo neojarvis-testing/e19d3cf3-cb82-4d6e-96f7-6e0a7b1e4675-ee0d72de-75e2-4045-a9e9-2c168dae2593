@@ -21,7 +21,7 @@ namespace dotnetapp.Services
         {
             return await _context.PlanApplications
                 .Include(pa => pa.SavingsPlan)
-                .Include(pa => pa.User)
+                .Include(pb => pb.User)
                 .ToListAsync();
         }
  

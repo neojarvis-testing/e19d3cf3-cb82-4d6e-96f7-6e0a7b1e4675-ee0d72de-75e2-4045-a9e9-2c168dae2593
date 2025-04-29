@@ -21,6 +21,7 @@ import { UserviewfeedbackComponent } from './components/userviewfeedback/uservie
 import { ManagereditsavingsplanComponent } from './components/managereditsavingsplan/managereditsavingsplan.component';
 import { UserviewsavingsplanComponent } from './components/userviewsavingsplan/userviewsavingsplan.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 

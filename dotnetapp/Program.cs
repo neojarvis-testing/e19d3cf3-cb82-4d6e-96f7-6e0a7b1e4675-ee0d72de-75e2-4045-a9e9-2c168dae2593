@@ -57,7 +57,6 @@ builder.Services.AddTransient<IAuthService, AuthService>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(e=> e.UseSqlServer(builder.Configuration.GetConnectionString("Mycon")));
 
-
 builder.Services.AddMvc()
     .AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 
