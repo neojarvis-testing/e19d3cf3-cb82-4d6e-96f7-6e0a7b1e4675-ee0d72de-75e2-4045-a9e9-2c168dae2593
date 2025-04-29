@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, rgba(69, 186, 237, 0.1), rgba(252, 255, 61, 0.1));
+  color: #1f1c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%; /* Reducing the width for a more compact table */
+  background: linear-gradient(135deg, rgba(69, 186, 237, 0.1), rgba(252, 255, 61, 0.1));
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 20px; /* Adds space above the heading */
+  margin-left: auto;
+  margin-right: auto; /* Center-aligns the container */
+  margin-bottom: 40px; /* Adds space below the container */
+}
+
+h1 {
+  text-align: center;
+  color: #1f1c2c;
+  margin: 10; /* Removes default margin */
+  padding: 20px 0; /* Add padding for better appearance */
+  
+  font-family: 'Roboto', sans-serif; /* Set font to Roboto */
+}
+
+.table {
+  width: 100%;
+  max-width: 1000px; /* Adjust max-width for a compact table */
+  margin: 0 auto; /* Center-aligns the table */
+  border-collapse: collapse;
+  background: linear-gradient(135deg, rgba(69, 186, 237, 0.1), rgba(252, 255, 61, 0.1));
+  border-radius: 15px;
+  /* box-shadow: 0 8px 16px rgba(24, 96, 184, 0.498); */
+  box-shadow: 0 4px 8px rgba(24, 96, 184, 0.25);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.table thead {
+  background: #ffffff;
+  color: #1f1c2c;
+  border-radius: 15px 15px 0 0;
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  text-align: center; /* Center-aligns all table cells by default */
+  border-bottom: 1px solid #ddd;
+  font-size: 14px; /* Increasing the font size */
+  font-weight: normal;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table th.comments, .table td.comments {
+  text-align: center; /* Left-aligns the comments column */
+}
+
+.table tbody tr:nth-child(even) {
+  background: #f4f4f4; /* Light grey background for even rows */
+}
+
+.table tbody tr:nth-child(odd) {
+  background: #ffffff; /* White background for odd rows */
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-info {
+  background: #2979ff;
+}
+
+.btn-info:hover {
+  background: #2962ff;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
