@@ -1,16 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-
-// @NgModule({
-//   declarations: [
-//     AppComponent
-
-import { AuthguardComponent } from './components/authguard/authguard.component';
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -42,7 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ManagernavComponent,
     ManagerviewapplicationformComponent,
     ManagerviewfeedbackComponent,
-    ManagerviewsavingsplanComponent,
+    ManagereditsavingsplanComponent,
     NavbarComponent,
     RegistrationComponent,
     UseraddfeedbackComponent,
@@ -57,7 +49,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
