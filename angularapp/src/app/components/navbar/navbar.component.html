@@ -1,13 +1,24 @@
-<div class="nav-container">
-    <div class="logo">
-        <a href="/" class="logo-link">FINANCE HUB</a>
+<nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a routerLink="/" class="logo">
+          <i class="logo-icon"></i>
+          FinanceHub
+        </a>
+        
+        <button class="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="nav-menu">
+          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+          <li><a routerLink="/features" routerLinkActive="active">Features</a></li>
+          <li><a routerLink="/pricing" routerLinkActive="active">Pricing</a></li>
+          <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+          <li class="nav-cta"><a routerLink="/login" class="btn primary">Get Started</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="menu">
-        <a routerLink="/" class="nav-link">HOME</a>
-        <a href="#" class="nav-link">FEATURES</a>
-        <a href="#" class="nav-link">PRICING</a>
-        <a href="#" class="nav-link">ABOUT</a>
-        <a routerLink="/login" class="nav-link sign-in">SIG IN</a>
-        <a routerLink="/register" class="nav-link get-started">GET STARTED</a>
-    </div>
-</div>
+  </nav>

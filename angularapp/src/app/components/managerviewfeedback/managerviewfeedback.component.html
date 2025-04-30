@@ -1,37 +1,29 @@
+<h1>Feedback Details</h1> <!-- Moved heading outside the container -->
 <div *ngIf="isLoggedIn()">
   <app-managernav></app-managernav>
-  <div class="dashboard-container">
-    <div class="dashboard-header">
-      <h1>Customer Feedback</h1>
-    </div>
-
-    <div *ngIf="feedbacks && feedbacks.length > 0" class="feedback-grid">
-      <div *ngFor="let feedback of feedbacks" class="feedback-card">
-        <div class="feedback-header">
-          <div class="user-info">
-            <i class="fas fa-user-circle user-icon"></i>
-            <div class="user-details">
-              <h3>{{ feedback.User?.Username || 'Anonymous' }}</h3>
-              <span class="feedback-date">
-                <i class="far fa-calendar-alt"></i> {{ feedback.DateProvided | date: 'dd-MM-yyyy' }}
-              </span>
-            </div>
-          </div>
-          <button class="profile-btn" (click)="showUserProfile(feedback.User)">
-            <i class="fas fa-id-card"></i> Profile
-          </button>
-        </div>
-        <div class="feedback-body">
-          <p class="feedback-text">{{ feedback.Comments }}</p>
-        </div>
-      </div>
-    </div>
-
-    <div *ngIf="!feedbacks || feedbacks.length === 0" class="empty-state">
-      <i class="far fa-comment-alt empty-icon"></i>
-      <h3>No Feedback Yet</h3>
-      <p>There are no customer feedbacks to display at this time.</p>
-    </div>
+  <div class="container">
+    <table class="table table-striped" *ngIf="feedbacks.length > 0; else noRecordsFound">
+      <thead>
+        <tr>
+          <th class="comments">Comments</th>
+          <th>Date Provided</th>
+          <th>User Profile</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let feedback of feedbacks">
+          <td class="comments">{{ feedback.Comments }}</td>
+          <td>{{ feedback.DateProvided | date: 'dd-MM-yyyy' }}</td>
+          <td>
+            <button class="btn btn-info" (click)="showUserProfile(feedback.User)">Show Profile</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- No Records Found -->
+    <ng-template #noRecordsFound>
+      <p>Oops! No records Found</p>
+    </ng-template>
   </div>
 </div>
 <div *ngIf="!isLoggedIn()">

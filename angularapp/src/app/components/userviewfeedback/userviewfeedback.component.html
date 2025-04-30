@@ -1,52 +1,51 @@
-<div *ngIf="isLoggedIn()">
-    <app-usernav></app-usernav>
-    <div class="dashboard-container">
-        <div class="dashboard-header">
-            <h1>My Feedback History</h1>
-            <a routerLink="/useraddfeedback" class="add-btn">
-                <i class="fas fa-plus"></i> Submit New Feedback
-            </a>
-        </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Feedback Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div *ngIf="isLoggedIn()">
+        <app-usernav></app-usernav>
+        <h1 class="heading">My Feedback Details</h1>
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Comments</th>
+                        <th>Date Provided</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let feedback of viewfeedback">
+                        <td>{{ feedback.Comments }}</td>
+                        <td>{{ feedback.DateProvided | date: 'dd-MM-yyyy' }}</td>
+                        <td>
+                            <button class="btn btn-danger" (click)="confirmDelete(feedback.FeedbackId)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <div *ngIf="viewfeedback && viewfeedback.length > 0" class="feedback-container">
-            <div *ngFor="let feedback of viewfeedback" class="feedback-card">
-                <div class="feedback-content">
-                    <div class="feedback-date">
-                        <i class="far fa-calendar-alt"></i>
-                        {{ feedback.DateProvided | date: 'dd-MM-yyyy' }}
+            <!-- Delete Confirmation Modal -->
+            <div *ngIf="delPopup" class="modal">
+                <div class="modal-content">
+                    <h3>Confirm Delete</h3>
+                    <p>Are you sure you want to delete this feedback?</p>
+                    <div class="button-container">
+                        <button class="btn btn-danger" (click)="deleteFeedback()">Delete</button>
+                        <button class="btn btn-secondary" (click)="closeDel()">Cancel</button>
                     </div>
-                    <p class="feedback-text">{{ feedback.Comments }}</p>
-                </div>
-                <div class="feedback-actions">
-                    <button class="delete-btn" (click)="confirmDelete(feedback.FeedbackId)">
-                        <i class="fas fa-trash"></i> Delete
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <div *ngIf="!viewfeedback || viewfeedback.length === 0" class="empty-state">
-            <i class="far fa-comment-alt empty-icon"></i>
-            <h3>No Feedback Submitted</h3>
-            <p>You haven't provided any feedback yet. We value your opinion!</p>
-            <a routerLink="/useraddfeedback" class="btn-primary">
-                <i class="fas fa-plus"></i> Submit Feedback
-            </a>
-        </div>
-
-        <!-- Delete Confirmation Modal -->
-        <div *ngIf="delPopup" class="modal-overlay">
-            <div class="modal-content">
-                <h3>Confirm Delete</h3>
-                <p>Are you sure you want to delete this feedback?</p>
-                <div class="modal-actions">
-                    <button class="btn-danger" (click)="deleteFeedback()">Delete</button>
-                    <button class="btn-secondary" (click)="closeDel()">Cancel</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div *ngIf="!isLoggedIn()">
-    <app-error></app-error>
-</div>
+    <div *ngIf="!isLoggedIn()">
+        <app-error></app-error>
+    </div>
+</body>
+</html>
