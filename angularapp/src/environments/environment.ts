@@ -5,6 +5,10 @@
 export const environment = {
   production: false,
 
+<<<<<<< HEAD
+=======
+  apiUrl:'https://8080-faaabadebefbfbdfccbdceeaeedceeddeeaecdae.premiumproject.examly.io'
+>>>>>>> 67ffadab8d044661502f50d0888a75a6e18a1509
 
   apiUrl:'https://8080-acdeaabcdbeacefbfbdfccbdceeaeedceeddeeaecdae.premiumproject.examly.io'
 }
