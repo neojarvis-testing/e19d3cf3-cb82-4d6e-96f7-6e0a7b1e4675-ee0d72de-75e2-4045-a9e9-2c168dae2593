@@ -32,11 +32,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> d4acdf18ab811926e1fc264875e16a9122f09ced
     ErrorComponent,
     HomeComponent,
     LoginComponent,

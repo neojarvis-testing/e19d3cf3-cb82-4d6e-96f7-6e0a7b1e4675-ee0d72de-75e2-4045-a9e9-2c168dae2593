@@ -503,11 +503,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-<<<<<<< HEAD
     apiUrl: 'https://8080-acdeaabcdbeacefbfbdfccbdceeaeedceeddeeaecdae.premiumproject.examly.io'
-=======
-    apiUrl: 'https://8080-cabbebefebafbfbdfccbdceeaeedceeddeeaecdae.premiumproject.examly.io'
->>>>>>> d4acdf18ab811926e1fc264875e16a9122f09ced
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -3036,8 +3032,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -3265,7 +3259,6 @@ UserviewsavingsplanComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__[
 /*! exports provided: RegistrationComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
->>>>>>> d4acdf18ab811926e1fc264875e16a9122f09ced
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegistrationComponent", function() { return RegistrationComponent; });
