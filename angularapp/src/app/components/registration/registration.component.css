@@ -109,6 +109,7 @@
 
 .form-control::placeholder {
     color: transparent;
+    padding: left 2rem;;
 }
 
 /* Select Styling */
@@ -134,6 +135,7 @@ select.form-control:focus {
     font-size: 0.9rem;
     pointer-events: none;
     transition: all 0.3s ease;
+    padding-left: 1rem;
 }
 
 .form-control:focus ~ label,
@@ -182,12 +184,15 @@ select.form-control:not([value=""]):not([value="null"]) ~ label {
 
 .terms-checkbox-container {
     display: flex;
-    align-items: flex-start;
+    align-items:center;
+    margin-left:0.25rem;
+    
 }
 
 .terms-checkbox-container input[type="checkbox"] {
     margin-top: 0.2rem;
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
     min-width: 16px;
     height: 16px;
     border: 2px solid #e2e8f0;
@@ -207,11 +212,19 @@ select.form-control:not([value=""]):not([value="null"]) ~ label {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 10px;
+  
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+
 }
 
 .terms-checkbox-container input[type="checkbox"]:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(44, 75, 204, 0.15);
+
+
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .checkbox-label {
@@ -220,6 +233,8 @@ select.form-control:not([value=""]):not([value="null"]) ~ label {
     line-height: 1.2;
     position: static;
     pointer-events: auto;
+    margin-right: 2rem;
+    margin-left: 2rem;
 }
 
 .checkbox-label a {
