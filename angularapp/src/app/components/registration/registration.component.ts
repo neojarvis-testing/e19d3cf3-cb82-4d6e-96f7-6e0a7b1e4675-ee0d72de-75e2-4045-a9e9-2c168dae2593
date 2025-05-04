@@ -82,6 +82,7 @@ export class RegistrationComponent implements OnInit {
         });
       },
       (error) => {
+        console.log(error);
         this.checkUserExists = true;
         this.err = error.error;
         Swal.fire({

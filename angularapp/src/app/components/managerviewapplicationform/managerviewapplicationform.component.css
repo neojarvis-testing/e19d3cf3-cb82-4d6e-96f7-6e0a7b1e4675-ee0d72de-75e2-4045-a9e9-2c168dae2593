@@ -42,11 +42,11 @@
 .search-box {
   position: relative;
   width: 300px;
-  max-width: 100%;
+  max-width: 90%;
 }
 
 .search-box input {
-  width: 100%;
+  width: 90%;
   padding: 12px 40px 12px 15px;
   border: 1px solid #e2e8f0;
   border-radius: 25px;
