@@ -1,24 +1,23 @@
-<nav class="navbar">
-    <div class="container">
-      <div class="navbar-content">
-        <a routerLink="/" class="logo">
-          <i class="logo-icon"></i>
-          FinanceHub
-        </a>
-        
-        <button class="mobile-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        
-        <ul class="nav-menu">
-          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-          <li><a routerLink="/features" routerLinkActive="active">Features</a></li>
-          <li><a routerLink="/pricing" routerLinkActive="active">Pricing</a></li>
-          <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-          <li class="nav-cta"><a routerLink="/login" class="btn primary">Get Started</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WealthWise - Smart Financial Solutions</title>
+
+  <div class="container header-container">
+      <a href="#" class="logo">
+          <span class="logo-icon">F</span>
+          Finance Hub
+      </a>
+      
+      <button class="mobile-toggle" id="mobileToggle">☰</button>
+      
+      <nav class="nav" id="mainNav">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#pricing">Plans</a>
+          <a routerLink="/register" class="btn btn-primary">Register</a>
+          <a routerLink="/login" class="btn btn-primary">Login</a>
+      </nav>
+  </div>
+</header>
+

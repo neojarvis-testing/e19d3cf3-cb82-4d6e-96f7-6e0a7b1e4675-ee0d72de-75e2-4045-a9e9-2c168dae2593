@@ -1,227 +1,292 @@
-.dashboard-container {
-  padding: 120px 30px 50px;
-  background-color: #071E3D;
-  min-height: 100vh;
+/* Available Savings Plans Styles */
+
+/* Import Dancing Script font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/* Page Heading */
+.heading {
+    text-align: center;
+    color: #1e293b;
+    margin: 2rem 0;
+    position: relative;
+    padding-bottom: 0.75rem;
 }
 
-.dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-  gap: 20px;
+.font-dancing-script {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    font-weight: 700;
 }
 
-.dashboard-header h1 {
-  color: #ffffff;
-  font-size: 32px;
-  font-weight: 600;
-  margin: 0;
+.heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #2c4bcc, #60a5fa);
+    border-radius: 3px;
 }
 
-.search-filter {
-  display: flex;
-  gap: 15px;
+/* Search Bar Styling */
+.form-group {
+    position: relative;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
 }
 
-.search-box {
-  position: relative;
+.search-label {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    z-index: 10;
 }
 
-.search-box input {
-  padding: 12px 15px 12px 40px;
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
-  min-width: 250px;
+.search-bar {
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border-radius: 25px;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
-.search-icon {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.7);
+.search-bar:focus {
+    outline: none;
+    border-color: #2c4bcc;
+    box-shadow: 0 0 0 3px rgba(44, 75, 204, 0.15);
 }
 
-.filter-box select {
-  padding: 12px 15px;
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
-  min-width: 150px;
-  appearance: none;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.7)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 15px;
+.search-bar::placeholder {
+    color: #94a3b8;
 }
 
-.plans-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
+/* Card Styling */
+.savings-plan-card-container {
+    perspective: 1000px;
+    height: 100%;
 }
 
-.plan-card {
-  background-color: #102C5C;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.savings-plan-card {
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    background: white;
+    position: relative;
+    overflow: hidden;
 }
 
-.plan-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+.savings-plan-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #2c4bcc, #60a5fa);
+    border-radius: 12px 0 0 12px;
 }
 
-.plan-header {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.savings-plan-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
-.low-risk {
-  background-color: rgba(0, 166, 125, 0.2);
+.card-body {
+    padding: 1.75rem;
 }
 
-.medium-risk {
-  background-color: rgba(255, 193, 7, 0.2);
+.card-title {
+    color: #1e293b;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 0.75rem;
 }
 
-.high-risk {
-  background-color: rgba(255, 107, 107, 0.2);
+.card-text {
+    color: #64748b;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
-.plan-header h3 {
-  margin: 0;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
+/* Custom text formatting for different card elements */
+.card-text:nth-of-type(1) { /* Goal Amount */
+    font-weight: 700;
+    color: #2c4bcc;
+    font-size: 1.1rem;
 }
 
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 500;
+/* Risk Level formatting */
+.card-text:nth-of-type(3) {
+    font-weight: 600;
 }
 
-.low-risk .risk-badge {
-  background-color: #00A67D;
-  color: white;
+.card-text:nth-of-type(3):contains('Low') {
+    color: #10b981; /* Green for low risk */
 }
 
-.medium-risk .risk-badge {
-  background-color: #FFC107;
-  color: #333;
+.card-text:nth-of-type(3):contains('Medium') {
+    color: #f59e0b; /* Amber for medium risk */
 }
 
-.high-risk .risk-badge {
-  background-color: #FF6B6B;
-  color: white;
+.card-text:nth-of-type(3):contains('High') {
+    color: #ef4444; /* Red for high risk */
 }
 
-.plan-body {
-  padding: 20px;
+/* Status formatting */
+.card-text:nth-of-type(5) {
+    font-weight: 600;
 }
 
-.plan-info {
-  margin-bottom: 20px;
+.card-text:nth-of-type(5):contains('Active') {
+    color: #10b981;
 }
 
-.info-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+.card-text:nth-of-type(5):contains('Inactive') {
+    color: #64748b;
 }
 
-.label {
-  color: rgba(255, 255, 255, 0.7);
+/* Description styling */
+.card-text:nth-of-type(4) {
+    margin-bottom: 1rem;
+    border-top: 1px dashed #e2e8f0;
+    border-bottom: 1px dashed #e2e8f0;
+    padding: 0.75rem 0;
+    font-style: italic;
+    color: #4b5563;
 }
 
-.value {
-  color: #ffffff;
-  font-weight: 500;
+/* Button Styling */
+.btn {
+    padding: 0.6rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
 }
 
-.status {
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  text-align: center;
+.btn-primary {
+    background: linear-gradient(to right, #2c4bcc, #60a5fa);
+    border: none;
+    box-shadow: 0 4px 10px rgba(44, 75, 204, 0.25);
 }
 
-.active {
-  background-color: rgba(0, 166, 125, 0.2);
-  color: #00A67D;
+.btn-primary:hover:not(:disabled) {
+    background: linear-gradient(to right, #1e3a8a, #3b82f6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(44, 75, 204, 0.35);
 }
 
-.inactive {
-  background-color: rgba(255, 107, 107, 0.2);
-  color: #FF6B6B;
+.btn-primary:active:not(:disabled) {
+    transform: translateY(0);
 }
 
-.plan-description {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-  line-height: 1.6;
+.btn-success {
+    background: linear-gradient(to right, #10b981, #34d399);
+    border: none;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.25);
 }
 
-.plan-footer {
-  padding: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+.btn-success:hover:not(:disabled) {
+    background: linear-gradient(to right, #059669, #10b981);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.35);
 }
 
-.apply-btn {
-  width: 100%;
-  padding: 12px 0;
-  background-color: #00A67D;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s;
+.btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
 }
 
-.apply-btn:hover:not(:disabled) {
-  background-color: #00c693;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 166, 125, 0.4);
+/* Container spacing */
+.container {
+    padding: 1rem;
+    margin-bottom: 3rem;
 }
 
-.apply-btn:disabled {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.5);
-  cursor: not-allowed;
+/* Card Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.col-md-6 {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.col-md-6:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+.col-md-6:nth-child(even) {
+    animation-delay: 0.3s;
+}
+
+/* No Results Message */
+.row:empty::after {
+    content: "No savings plans match your search criteria";
+    display: block;
+    text-align: center;
+    padding: 3rem;
+    color: #64748b;
+    font-size: 1.1rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .container {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
-  .dashboard-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .search-filter {
-    width: 100%;
-    flex-direction: column;
-  }
-  
-  .search-box, .filter-box {
-    width: 100%;
-  }
-  
-  .search-box input, .filter-box select {
-    width: 100%;
-  }
-  
-  .plans-grid {
-    grid-template-columns: 1fr;
-  }
+    .font-dancing-script {
+        font-size: 2.5rem;
+    }
+    
+    .savings-plan-card {
+        margin-bottom: 1rem;
+    }
+    
+    .savings-plan-card:hover {
+        transform: translateY(-5px) rotateX(3deg);
+    }
+}
+
+@media (max-width: 576px) {
+    .font-dancing-script {
+        font-size: 2rem;
+    }
+    
+    .search-bar {
+        padding: 0.6rem 1rem 0.6rem 2.5rem;
+    }
+    
+    .card-body {
+        padding: 1.25rem;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
 }

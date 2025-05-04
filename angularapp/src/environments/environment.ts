@@ -7,7 +7,7 @@ export const environment = {
 
 
 
-  apiUrl:'https://8080-faaabadebefbfbdfccbdceeaeedceeddeeaecdae.premiumproject.examly.io'
+  apiUrl:'https://8080-fadaecfafbfbdfccbdceeaeedceeddeeaecdae.premiumproject.examly.io'
 
  
 
