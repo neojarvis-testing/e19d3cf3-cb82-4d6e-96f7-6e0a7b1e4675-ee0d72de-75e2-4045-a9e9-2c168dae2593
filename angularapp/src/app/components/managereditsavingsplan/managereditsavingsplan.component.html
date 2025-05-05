@@ -1,9 +1,12 @@
-<h2>Edit Savings Plan</h2>
+
 <div *ngIf="isLoggedIn()">
+   
     <app-managernav></app-managernav>
-    
+    <h2>Edit Savings Plan</h2>
     <div class="background-wrapper">
+       
         <div class="container">
+            
             <form #form="ngForm" (ngSubmit)="updateSavingsPlan(form)" novalidate>
 
 

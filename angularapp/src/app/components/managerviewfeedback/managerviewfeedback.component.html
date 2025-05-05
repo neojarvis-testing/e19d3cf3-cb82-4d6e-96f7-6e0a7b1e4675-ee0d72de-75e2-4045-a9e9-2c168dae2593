@@ -1,7 +1,8 @@
-<h1>Feedback Details</h1> <!-- Moved heading outside the container -->
+
 <div *ngIf="isLoggedIn()">
   <app-managernav></app-managernav>
   <div class="container">
+    <h1>Feedback Details</h1> <!-- Moved heading outside the container -->
     <table class="table table-striped" *ngIf="feedbacks.length > 0; else noRecordsFound">
       <thead>
         <tr>
