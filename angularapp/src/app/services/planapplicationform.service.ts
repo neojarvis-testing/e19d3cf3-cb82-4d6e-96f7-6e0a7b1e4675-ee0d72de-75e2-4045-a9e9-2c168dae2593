@@ -56,5 +56,9 @@ export class PlanapplicationformService {
     return this.http.get(`${this.apiUrl}/api/PlanApplication/savingsPlan/${savingsPlanId}/user/${userId}`);
   }
 
+  getPlanById(savingsPlanId:number){
+    return this.http.get<PlanApplication>(`${this.apiUrl}/api/SavingsPlan/${savingsPlanId}`)
+  }
+
 
 }

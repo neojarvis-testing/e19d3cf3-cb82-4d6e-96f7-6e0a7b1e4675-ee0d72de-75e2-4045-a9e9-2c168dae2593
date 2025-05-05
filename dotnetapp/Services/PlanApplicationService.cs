@@ -58,9 +58,9 @@ namespace dotnetapp.Services
         public async Task<IEnumerable<PlanApplication>> GetPlanApplicationsByUserId(int userId)
         {
             return await _context.PlanApplications
+                .Where(pa => pa.UserId == userId)
                 .Include(pa => pa.SavingsPlan)
                 .Include(pa => pa.User)
-                .Where(pa => pa.UserId == userId)
                 .ToListAsync();
         }
  

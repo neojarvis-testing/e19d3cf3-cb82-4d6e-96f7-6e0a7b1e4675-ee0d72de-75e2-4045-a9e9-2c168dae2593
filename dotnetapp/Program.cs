@@ -30,7 +30,7 @@ builder.Services.AddSwaggerGen(c =>
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.Http,
-        Scheme = "bearer"
+        Scheme = "bearer"  
     });
 
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
@@ -55,7 +55,7 @@ builder.Services.AddTransient<IPlanApplicationService, PlanApplicationService>()
 builder.Services.AddTransient<ISavingsPlanService, SavingsPlanService>();
 builder.Services.AddTransient<IAuthService, AuthService>();
 
-builder.Services.AddDbContext<ApplicationDbContext>(e=> e.UseSqlServer(builder.Configuration.GetConnectionString("Mycon")));
+builder.Services.AddDbContext<ApplicationDbContext>(e=> e.UseSqlServer(builder.Configuration.GetConnectionString("myconn")));
 
 builder.Services.AddMvc()
     .AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);

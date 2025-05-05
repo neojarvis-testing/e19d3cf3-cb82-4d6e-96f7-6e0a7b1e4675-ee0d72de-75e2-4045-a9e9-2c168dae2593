@@ -97,7 +97,7 @@ namespace dotnetapp.Services
                 return (0, "Invalid email");
             }
 
-            var result = await _signInManager.PasswordSignInAsync(user.UserName, model.Password, false, lockoutOnFailure: false);
+            var result = await _signInManager.PasswordSignInAsync(user.UserName, model.Password, false, lockoutOnFailure: false);//ISPERSIST=REMEMEMBERME
 
 
             // If login succeeds, generate token

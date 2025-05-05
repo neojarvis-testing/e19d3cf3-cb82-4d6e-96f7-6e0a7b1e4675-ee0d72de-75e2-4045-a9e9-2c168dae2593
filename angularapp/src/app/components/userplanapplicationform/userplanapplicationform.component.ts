@@ -61,6 +61,7 @@ export class UserplanapplicationformComponent implements OnInit {
 
     this.isAddMode = !this.id;
     this.planApplicationForm.UserId = parseInt(localStorage.getItem("userId"));
+    console.log('User Id:',this.planApplicationForm.UserId);
     this.planApplicationForm.SavingsPlanId = this.id;
     this.savingsPlanService.getSavingsPlanById(this.id).subscribe(res => {
       this.maxGoalAmount = res.GoalAmount;
