@@ -1,7 +1,7 @@
-<h2>Add Feedback</h2>
+
 <div *ngIf="isLoggedIn()">
     <app-usernav></app-usernav>
-
+    <h2>Add Feedback</h2>
     <div class="container">
         <form [formGroup]="addform" (ngSubmit)="addFeedback()" class="form">
             <div class="text-center">

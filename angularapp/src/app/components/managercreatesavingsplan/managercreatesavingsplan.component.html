@@ -1,10 +1,10 @@
-<h2>Create New Savings Plan</h2>
+
 <div *ngIf="isLoggedIn()">
     <app-managernav></app-managernav>
     
     <div class="background-wrapper">
         <div class="container">
-             
+            <h1>Create New Savings Plan</h1>
             <form [formGroup]="form" (ngSubmit)="addSavingsPlan()">
 
                 <div class="form-group">
