@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="form-group">
-                    <input [(ngModel)]="savingsPlan.GoalAmount" name="goalAmount" type="number" id="goalAmount" class="form-control" required min="1000" max="10000000" placeholder="Goal Amount">
+                    <input [(ngModel)]="ttsavingsPlan.GoalAmount" name="goalAmount" type="number" id="goalAmount" class="form-control" required min="1000" max="10000000" placeholder="Goal Amount">
                     <label for="goalAmount">Goal Amount</label>
                     <div *ngIf="form.submitted && form.controls.goalAmount?.errors">
                         <div *ngIf="form.controls.goalAmount?.errors.required" class="error-message">Goal Amount is required.</div>
