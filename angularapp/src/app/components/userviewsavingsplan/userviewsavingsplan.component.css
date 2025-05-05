@@ -252,6 +252,116 @@
     max-width: 500px;
 }
 
+/* Pagination Styles */
+.pagination {
+    margin: 3rem 0;
+    background: white;
+    border-radius: 50px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-item {
+    margin: 0 2px;
+}
+
+.page-link {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: #1e293b;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.page-link:hover {
+    background: #f0f9ff;
+    color: #2c4bcc;
+}
+
+.page-item.active .page-link {
+    background: linear-gradient(to right, #2c4bcc, #60a5fa);
+    color: white;
+    box-shadow: 0 2px 8px rgba(44, 75, 204, 0.3);
+}
+
+.page-item.disabled .page-link {
+    color: #94a3b8;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.page-item.disabled .page-link:hover {
+    background: transparent;
+}
+
+/* Showing results info */
+.showing-results {
+    margin: 1rem 0;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Items per page selector */
+.items-per-page {
+    margin: 1rem 0;
+}
+
+.items-per-page .form-select {
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    color: #1e293b;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.items-per-page .form-select:focus {
+    outline: none;
+    border-color: #2c4bcc;
+    box-shadow: 0 0 0 3px rgba(44, 75, 204, 0.15);
+}
+
+/* Responsive pagination */
+@media (max-width: 768px) {
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .page-item {
+        margin: 2px;
+    }
+    
+    .page-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .showing-results {
+        text-align: center;
+    }
+    
+    .items-per-page {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-link {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.85rem;
+    }
+    
+    .items-per-page .form-select {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* Responsive design */
 @media (max-width: 992px) {
     .container {
