@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./managernav.component.css']
 })
 export class ManagernavComponent implements OnInit {
-
+ 
   
   name: any = localStorage.getItem('userName');
 

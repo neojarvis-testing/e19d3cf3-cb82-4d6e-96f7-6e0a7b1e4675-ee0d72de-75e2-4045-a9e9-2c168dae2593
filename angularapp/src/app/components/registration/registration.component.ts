@@ -82,13 +82,14 @@ export class RegistrationComponent implements OnInit {
         });
       },
       (error) => {
+        console.log(error);
         this.checkUserExists = true;
         this.err = error.error;
         Swal.fire({
           title: 'Error!',
-          text: 'Registration Failed. Please try again.',
+          text: 'User already exists.Please use another email.',
           icon: 'error',
-          timer: 1500,
+          timer: 3500,
           showConfirmButton: false
         });
       }

@@ -9,12 +9,19 @@ import Swal from 'sweetalert2';
   styleUrls: ['./usernav.component.css']
 })
 export class UsernavComponent implements OnInit {
+
   name: any = localStorage.getItem('userName');
+
 
   constructor(private auth: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
+
+
+  
+
+
 
   logout() {
     Swal.fire({
@@ -39,3 +46,5 @@ export class UsernavComponent implements OnInit {
     });
   }
 }
+
+
