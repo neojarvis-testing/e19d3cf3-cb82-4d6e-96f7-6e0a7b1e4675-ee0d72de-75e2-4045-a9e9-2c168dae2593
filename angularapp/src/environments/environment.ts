@@ -5,16 +5,9 @@
 export const environment = {
   production: false,
 
-<<<<<<< HEAD
-=======
-
 
   apiUrl:'https://8080-fadaecfafbfbdfccbdceeaeedceeddeeaecdae.premiumproject.examly.io'
 
- 
->>>>>>> e9e3999a604551b090284a1ed241ad4334bddbf6
-
-  apiUrl:'https://8080-ddecdbfbfbdfccbdceeaeedceeddeeaecdae.premiumproject.examly.io'
 };
 
 

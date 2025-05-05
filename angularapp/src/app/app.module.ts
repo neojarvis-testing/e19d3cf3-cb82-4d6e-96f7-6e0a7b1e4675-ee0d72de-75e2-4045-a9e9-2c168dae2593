@@ -3,15 +3,13 @@ import { NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
+
 
 
 // @NgModule({
 //   declarations: [
 //     AppComponent
 
-=======
->>>>>>> e9e3999a604551b090284a1ed241ad4334bddbf6
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
