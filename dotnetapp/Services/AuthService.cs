@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity;  // Used for login and registration purpose using inbuild classes
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -24,14 +24,14 @@ namespace dotnetapp.Services
 
         public AuthService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration, RoleManager<IdentityRole> roleManager, ApplicationDbContext context)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
+            _userManager = userManager;  //stores data in encripted way && for password it is in encripted way using sorting(Aspnet table)
+            _signInManager = signInManager; //
             _configuration = configuration;
             _roleManager = roleManager;
             _context = context;
         }
 
-        public async Task<(int, string)> Registration(User model, string role)
+        public async Task<(int, string)> Registration(User model, string role) //Register button click this will work
         {
             //If user already exists
             var foundUser = await _userManager.FindByEmailAsync(model.Email);
@@ -105,8 +105,11 @@ namespace dotnetapp.Services
             if (result.Succeeded)
             {
                 var customUser = _context.Users.FirstOrDefault(u => u.Email == model.Email);
-                var role = await _userManager.GetRolesAsync(user);
-                var claims = new[]
+
+                var role = await _userManager.GetRolesAsync(user);//searches role based on email...
+
+                var claims = new[]// defines identity && JWt uses claims to initialize the username,password etc.....
+                
                 {
                     new Claim(ClaimTypes.Name, user.UserName),
                     new Claim(ClaimTypes.Email, user.Email),

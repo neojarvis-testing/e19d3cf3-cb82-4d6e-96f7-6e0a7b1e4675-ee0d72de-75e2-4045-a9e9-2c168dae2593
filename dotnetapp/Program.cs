@@ -15,7 +15,7 @@ using Microsoft.OpenApi.Models;
 using DotNetEnv;
 
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args);  // catral server starts internally
 DotNetEnv.Env.Load();
 
 builder.Services.AddControllers();

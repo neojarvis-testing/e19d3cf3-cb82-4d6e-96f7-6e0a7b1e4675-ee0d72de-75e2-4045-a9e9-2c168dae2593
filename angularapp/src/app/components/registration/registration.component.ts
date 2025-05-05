@@ -17,7 +17,6 @@ export class RegistrationComponent implements OnInit {
     MobileNumber: "",
     UserRole: ""
   }
-
   err: string = "";
   showPassword: boolean = false;
   confirmPassword: string = "";
