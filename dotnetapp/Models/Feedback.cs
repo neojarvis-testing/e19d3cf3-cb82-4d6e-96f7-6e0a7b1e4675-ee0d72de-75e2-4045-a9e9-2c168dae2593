@@ -19,7 +19,6 @@ namespace dotnetapp.Models
         
         public DateTime DateProvided { get; set; }
 
-        [JsonIgnore]
         public User? User  { get; set; }
 
     }

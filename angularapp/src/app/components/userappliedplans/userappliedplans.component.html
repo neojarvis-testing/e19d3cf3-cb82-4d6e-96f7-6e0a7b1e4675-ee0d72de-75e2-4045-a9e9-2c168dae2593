@@ -1,7 +1,8 @@
 
-<h2>Applied Plans</h2>
+
 <div *ngIf="isLoggedIn()">
     <app-usernav></app-usernav>
+    <h2>Applied Plans</h2>
     <div class="container">
         <table class="table table-striped" *ngIf="planApplications.length > 0; else noRecordsFound">
             <thead>

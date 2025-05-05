@@ -29,7 +29,11 @@ namespace dotnetapp.Models
         public string? ProofDocument { get; set; }
 
         
+<<<<<<< HEAD
         
+=======
+     
+>>>>>>> e9e3999a604551b090284a1ed241ad4334bddbf6
         public User? User { get; set; }
        
         

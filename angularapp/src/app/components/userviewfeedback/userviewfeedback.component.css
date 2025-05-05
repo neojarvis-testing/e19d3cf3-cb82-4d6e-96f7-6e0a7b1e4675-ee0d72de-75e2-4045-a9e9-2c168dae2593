@@ -1,143 +1,295 @@
-/* Modern and Professional Styling */
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    background-size: cover;
-    background-attachment: fixed;
+/* My Feedback Details Styles */
+
+/* Page styles */
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #1e293b;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page heading */
+.heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 1.8rem 0;
+  position: relative;
+  color: #1e293b;
+  padding-bottom: 0.75rem;
+}
+
+.heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #2c4bcc, #60a5fa);
+  border-radius: 3px;
+}
+
+/* Main container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to right, #2c4bcc, #60a5fa);
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 2rem;
+}
+
+thead {
+  background: linear-gradient(to right, #2c4bcc, #60a5fa);
+  color: white;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+th:first-child {
+  border-top-left-radius: 8px;
+}
+
+th:last-child {
+  border-top-right-radius: 8px;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f8fafc;
+}
+
+tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+}
+
+/* Comments column */
+td:first-child {
+  min-width: 300px;
+  max-width: 500px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+/* Date column */
+td:nth-child(2) {
+  white-space: nowrap;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Button styling */
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(239, 68, 68, 0.25);
+}
+
+.btn-secondary {
+  background-color: #64748b;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #475569;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(100, 116, 139, 0.25);
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+}
+
+.modal-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to right, #ef4444, #f87171);
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-content h3 {
+  color: #1e293b;
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  margin: 0 0 1.5rem;
+  color: #64748b;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Empty state */
+.table:empty::after {
+  content: "No feedback records found";
+  display: block;
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+  font-size: 1.1rem;
+  grid-column: 1 / -1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+tbody tr {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+tbody tr:nth-child(1) { animation-delay: 0.05s; }
+tbody tr:nth-child(2) { animation-delay: 0.1s; }
+tbody tr:nth-child(3) { animation-delay: 0.15s; }
+tbody tr:nth-child(4) { animation-delay: 0.2s; }
+tbody tr:nth-child(5) { animation-delay: 0.25s; }
+tbody tr:nth-child(6) { animation-delay: 0.3s; }
+tbody tr:nth-child(7) { animation-delay: 0.35s; }
+tbody tr:nth-child(8) { animation-delay: 0.4s; }
+tbody tr:nth-child(9) { animation-delay: 0.45s; }
+tbody tr:nth-child(10) { animation-delay: 0.5s; }
+
+.modal-content {
+  animation: modalIn 0.3s ease-out;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+      padding: 1.5rem;
+      margin: 0 1rem;
   }
   
   .heading {
-    text-align: center;
-    margin: 40px 0;
-    color: #2c3e50;
-    font-family: 'Playfair Display', serif;
-    font-size: 3em;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    background: linear-gradient(45deg, #2c3e50, #3498db);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .container {
-    margin: 30px auto;
-    max-width: 1000px;
-    padding: 25px;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      font-size: 1.6rem;
   }
   
   .table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 25px 0;
+      display: block;
+      overflow-x: auto;
   }
   
-  .table th {
-    text-align: center;
-    padding: 20px 15px;
-    background: linear-gradient(135deg, #2c3e50, #3498db);
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-  
-  .table td {
-    text-align: center;
-    padding: 15px;
-    vertical-align: middle;
-    border-bottom: 1px solid #eee;
-    font-size: 14px;
-    color: #2c3e50;
-    transition: all 0.3s ease;
-  }
-  
-  .table tbody tr {
-    transition: all 0.3s ease;
-  }
-  
-  .table tbody tr:hover {
-    background-color: #f8f9fa;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .btn {
-    padding: 8px 16px;
-    border-radius: 5px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-danger {
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
-    color: white;
-    border: none;
-  }
-  
-  .btn-danger:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
-  }
-  
-  .btn-secondary {
-    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
-    color: white;
-    border: none;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  th, td {
+      padding: 0.8rem;
   }
   
   .modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    width: 400px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-    text-align: center;
+      max-width: 90%;
+      padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+      padding: 1rem;
+  }
+  
+  .heading {
+      font-size: 1.4rem;
   }
   
   .button-container {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
+      flex-direction: column;
+      gap: 0.5rem;
   }
   
-  @media (max-width: 768px) {
-    .container {
-        margin: 15px;
-        padding: 15px;
-    }
-    .heading {
-        font-size: 2em;
-    }
-    .table th, .table td {
-        padding: 12px 8px;
-        font-size: 13px;
-    }
+  .button-container .btn {
+      width: 100%;
   }
-  
+}
